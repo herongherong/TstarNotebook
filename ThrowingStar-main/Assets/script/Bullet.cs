@@ -37,13 +37,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Enemy")
         {
             TargetObj = GameObject.FindWithTag("Enemy");
             offset = TargetObj.transform.position - transform.position;
             isCollsion = true;
             //collisionOK();
-            Destroy(gameObject, 3);
+            Destroy(gameObject, 10);
             //Destroy(TargetObj, 3);
         }
 
@@ -54,13 +55,13 @@ public class Bullet : MonoBehaviour
             isCollsion = true;
             //collisionOK();
             //ExpBarrel();
-            Destroy(gameObject, 3);
+            Destroy(gameObject, 10);
             //Debug.Log("col");
         }
 
        
     }
-
+    /*
     void collisionOK()
     {
         rotateShuriken rotateshuriken = GameObject.Find("Shuriken").GetComponent<rotateShuriken>();
@@ -68,7 +69,7 @@ public class Bullet : MonoBehaviour
         //rotateshuriken.turnSpeed = 0.0f ;
 
     }
-
+    
     void ExpBarrel()
     {
         //지정한 원점을 중심으로 10.0f 반경 내에 들어와 있는 Collider 객체 추출
@@ -84,5 +85,5 @@ public class Bullet : MonoBehaviour
 
         }
 
-    }
+    }*/
 }

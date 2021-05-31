@@ -56,13 +56,16 @@
     <Compile Include="Assets\script\playerCamera.cs" />
     <Compile Include="Assets\script\Bullet.cs" />
     <Compile Include="Assets\script\cameraCtrl.cs" />
+    <Compile Include="Assets\script\trail.cs" />
     <Compile Include="Assets\script\MoveCamera.cs" />
+    <Compile Include="Assets\camPosition.cs" />
     <Compile Include="Assets\ExplosionEffect\Scripts\PDS_GameController.cs" />
     <Compile Include="Assets\script\rotateShuriken.cs" />
     <Compile Include="Assets\ExplosionEffect\Scripts\ScrollingUVs_PDS.cs" />
+    <Compile Include="Assets\script\GravityBullet.cs" />
     <Compile Include="Assets\script\Player.cs" />
-    <Compile Include="Assets\script\trail.cs" />
-    <Compile Include="Assets\camPosition.cs" />
+    <Compile Include="Assets\script\Enemy.cs" />
+    <Compile Include="Assets\script\callGravityBullet.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shuriken\Demo Scene\Prototyping\Shaders\WorldCoordDiffuse.shader" />
