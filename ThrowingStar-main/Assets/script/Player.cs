@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     public GameObject Bullets;
     public Transform BulletPos;
     public Vector3 jumpVector;
-   
 
 
     //캐릭터높이 정해줌 밑에 있는 isGround에서 사용
@@ -106,9 +105,11 @@ public class Player : MonoBehaviour
             {
                 //추가속도(1.3배로 0.8초 유지)
                 moveSpeed = moveSpeed *1.5f;
-                Invoke("moveSpeedReset", 2.8f);
+                Invoke("moveSpeedReset", 0.8f);
                 //카메라y축 절반 내려감(0.8초 유지)
-                isSlide = true;
+                isSlide = true; 
+                camPosition camposition = GameObject.Find("Camera Position").GetComponent<camPosition>();
+                camposition.moveSight();
 
             }
 
@@ -141,6 +142,9 @@ public class Player : MonoBehaviour
         //점프시 위쪽방향으로 힘추가하는 식으로 점프한다함
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
         rb.AddRelativeForce(orientation.forward* -1 * 1.5f* jumpForce, ForceMode.Impulse);
+
+
+
     }
 
     void ControlDrag()

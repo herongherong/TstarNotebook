@@ -61,6 +61,8 @@
     <Compile Include="Assets\script\rotateShuriken.cs" />
     <Compile Include="Assets\ExplosionEffect\Scripts\ScrollingUVs_PDS.cs" />
     <Compile Include="Assets\script\Player.cs" />
+    <Compile Include="Assets\script\trail.cs" />
+    <Compile Include="Assets\camPosition.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shuriken\Demo Scene\Prototyping\Shaders\WorldCoordDiffuse.shader" />
