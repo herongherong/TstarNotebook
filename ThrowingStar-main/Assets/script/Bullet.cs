@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     GameObject TargetObj;
     Vector3 offset;
     Transform tr;
+    public Vector3 pos;
 
     public bool isCollsion = false;
 
@@ -18,6 +19,8 @@ public class Bullet : MonoBehaviour
         TargetObj = null;
         isCollsion = false;
         offset = new Vector3(0, 0, 0);
+        pos = this.gameObject.transform.position;
+        
     }
 
     // Update is called once per frame
@@ -44,7 +47,7 @@ public class Bullet : MonoBehaviour
             offset = TargetObj.transform.position - transform.position;
             isCollsion = true;
             //collisionOK();
-            Destroy(gameObject, 10);
+            Destroy(gameObject, 3);
             //Destroy(TargetObj, 3);
         }
 
@@ -55,7 +58,7 @@ public class Bullet : MonoBehaviour
             isCollsion = true;
             //collisionOK();
             //ExpBarrel();
-            Destroy(gameObject, 10);
+            Destroy(gameObject, 3);
             //Debug.Log("col");
         }
 

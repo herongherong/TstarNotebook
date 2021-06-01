@@ -22,12 +22,13 @@ public class Enemy : MonoBehaviour
     public void movingByBlackHole()
     {
         Debug.Log("movingByBlackHole()작동");
-        GravityBullet gravitybullet = GameObject.Find("GravityBullet").GetComponent<GravityBullet>();
-        Vector3 pos = gravitybullet.pos;
+        GravityShuriken gravityshuriken = GameObject.Find("GravityShuriken(Clone)").GetComponent<GravityShuriken>();
+        
+        Vector3 pos = gravityshuriken.pos;
 
         Vector3 dir = (pos - transform.position).normalized;
 
-        acceleration = 0.01f;
+        acceleration = 0.005f;
 
         velocity = (velocity + acceleration * Time.deltaTime);
 
@@ -35,26 +36,26 @@ public class Enemy : MonoBehaviour
 
 
 
-        if (distance <= 7.0f && distance >= 3.0f)
+        if (distance <= 8.0f && distance >= 4.0f)
 
         {
-            Debug.Log("7m이내임");
+            Debug.Log("8m이내임");
             //구심력 구현, 끌려오는 즉 이 에너미 스크립트가 달린 에너미를 끌어옴.
             transform.position = new Vector3(transform.position.x + (dir.x * velocity),
                 transform.position.y + (dir.y * velocity), 
                 transform.position.z + (dir.z * velocity) );
             // 한방향 회전 구현
-                transform.RotateAround(pos, new Vector3(0,1,0), 500 * Time.deltaTime);
+                transform.RotateAround(pos, new Vector3(0,1,0), 1000 * Time.deltaTime);
         }
-        else if(distance <= 3.0f && distance >= 0.1f)
+        else if(distance <= 4.0f && distance >= 0.1f)
         {
-            Debug.Log("3m이내임");
+            Debug.Log("4m이내임");
             //구심력 구현, 끌려오는 즉 이 에너미 스크립트가 달린 에너미를 끌어옴.
             transform.position = new Vector3(transform.position.x + (dir.x * velocity),
                 transform.position.y + (dir.y * velocity),
                 transform.position.z + (dir.z * velocity));
             // 한방향 회전 구현
-            transform.RotateAround(pos, new Vector3(0, 1, 0), 800 * Time.deltaTime);
+            transform.RotateAround(pos, new Vector3(0, 1, 0), 1600 * Time.deltaTime);
         }
         else
 

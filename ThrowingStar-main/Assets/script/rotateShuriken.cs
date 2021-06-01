@@ -21,12 +21,12 @@ public class rotateShuriken : MonoBehaviour
         if (isCol == false)
         {
             transform.Rotate(Vector3.up, turnSpeed);
-            Debug.Log("isCol false");
+            //Debug.Log("isCol false");
         }
         else if(isCol == true)
         {
             transform.Rotate(Vector3.up, 0.0f);
-            Debug.Log("isCol true");
+            //Debug.Log("isCol true");
         }
         
     }
@@ -38,7 +38,7 @@ public class rotateShuriken : MonoBehaviour
             isCol = true;
             //transform.Rotate(Vector3.up, 0.0f);
             //transform.eulerAngles = new Vector3(transform.rotation.x, 0.0f, transform.rotation.z);
-            Debug.Log("onTrigger");
+            //Debug.Log("onTrigger");
         }
 
     }
