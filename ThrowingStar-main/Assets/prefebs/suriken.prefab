@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollsion: 0
+  explosionEffect: {fileID: 100014, guid: 7ae0f082131b65b4db997d70d822add3, type: 3}
   bulletSpeed: 30
 --- !u!54 &6508276549261224493
 Rigidbody:
