@@ -10,9 +10,10 @@ public class Bullet : MonoBehaviour
     Transform tr;
     public Vector3 pos;
 
+   
     public bool isCollsion = false;
 
-    public float bulletSpeed = 2;
+    public float bulletSpeed = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +28,14 @@ public class Bullet : MonoBehaviour
     void Update()
     {
 
-        if (isCollsion)
+        if (isCollsion == true)
         {
-            transform.position = TargetObj.transform.position - offset;
+            //if(firstCollision == false)
+            //{
+                transform.position = TargetObj.transform.position - offset;
+               // firstCollision = true;
+            //}
+            
         }
         else
         {
@@ -49,6 +55,7 @@ public class Bullet : MonoBehaviour
             //collisionOK();
             Destroy(gameObject, 3);
             //Destroy(TargetObj, 3);
+            //firstCollision = true;
         }
 
         if (other.tag == "Wall")
@@ -60,6 +67,7 @@ public class Bullet : MonoBehaviour
             //ExpBarrel();
             Destroy(gameObject, 3);
             //Debug.Log("col");
+            //firstCollision = true;
         }
 
        
