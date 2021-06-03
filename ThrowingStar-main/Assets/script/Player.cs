@@ -6,8 +6,12 @@ using UnityEngine;
 //Plai 유튜브 https://www.youtube.com/watch?v=LqnPeqoJRFY 참조
 public class Player : MonoBehaviour
 {
-
+    //수리검 뭐 들건지 처리하기 위해서
     public GameObject Bullets;
+    public GameObject Bullets2;
+    int WeaponinHand;
+
+
     public Transform BulletPos;
     public Vector3 jumpVector;
 
@@ -26,6 +30,9 @@ public class Player : MonoBehaviour
     [Header("Keybinds")]//점프키 만들어주는 헤더라 함
     [SerializeField] KeyCode jumpKey = KeyCode.Space;
     [SerializeField] KeyCode sliding = KeyCode.C;
+    [SerializeField] KeyCode keyboard1 = KeyCode.Alpha1;
+    [SerializeField] KeyCode keyboard2 = KeyCode.Alpha2;
+    [SerializeField] KeyCode keyboard3 = KeyCode.Alpha3;
 
     [Header("Jumping")]
     public float jumpForce = 12.0f;
@@ -54,9 +61,9 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); //리지드바디 컴포넌트 가져오기
         rb.freezeRotation = true;
+        WeaponinHand = 1;
 
-        
-        
+
 
     }
 
@@ -83,8 +90,30 @@ public class Player : MonoBehaviour
             float yRotationTemp = playercamera.yRotation;
             Quaternion pRotation = Quaternion.Euler(xRotationTemp, yRotationTemp, 0);
 
-            GameObject Bullet = Instantiate(Bullets, BulletPos.position, pRotation);
-            //GameObject Bullet = Instantiate(Bullets, BulletPos.position, transform.localRotation);
+            //폭발수리검
+            if(WeaponinHand == 1)
+            {
+                Debug.Log("폭발수리검 발사");
+                moveSpeed = 6f;
+                GameObject Bullet = Instantiate(Bullets, BulletPos.position, pRotation);
+                //GameObject Bullet = Instantiate(Bullets, BulletPos.position, transform.localRotation);
+            }
+            //중력수리검
+            else if(WeaponinHand == 2)
+            {
+                Debug.Log("중력수리검 발사");
+                moveSpeed = 6f;
+                GameObject Bullet2 = Instantiate(Bullets2, BulletPos.position, pRotation);
+            }
+            //맨손, 달리기 속도 올려줌
+            else if(WeaponinHand == 3)
+            {
+                if(moveSpeed == 6f)
+                {
+                    moveSpeed = 8f;
+                }
+            }
+            
         }
 
         //점프와 더블점프(벽점프)
@@ -115,7 +144,21 @@ public class Player : MonoBehaviour
 
 
         }
-
+        if (Input.GetKey(keyboard1))
+        {
+            Debug.Log("1번을 눌럿슴");
+            WeaponinHand = 1;
+        }
+        else if (Input.GetKey(keyboard2))
+        {
+            Debug.Log("2번을 눌럿슴");
+            WeaponinHand = 2;
+        }
+        else if (Input.GetKey(keyboard3))
+        {
+            Debug.Log("3번을 눌럿슴");
+            WeaponinHand = 3;
+        }
 
     }
 
