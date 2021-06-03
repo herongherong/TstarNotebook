@@ -57,7 +57,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.03
+  m_Radius: 0.04
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5251001454192434578
 GameObject:
@@ -68,9 +68,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5251001454192434579}
-  - component: {fileID: 5251001454192434576}
   - component: {fileID: 5251001454192434577}
   - component: {fileID: 376930446832387581}
+  - component: {fileID: 3790758516076494478}
   m_Layer: 0
   m_Name: suriken
   m_TagString: Untagged
@@ -93,20 +93,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5251001454192434576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5251001454192434578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa4f30000f2020438ba2b4af29fe46c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCollsion: 0
-  bulletSpeed: 30
 --- !u!54 &5251001454192434577
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,6 +122,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3790758516076494478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251001454192434578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d209f0b00e655f4eacffa11975fe85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookingTime: 0
+  isCollsion: 0
+  explosionEffect: {fileID: 153650395967285316, guid: 37d0ebe668bc11e409bd7e2823ee9a0c, type: 3}
+  bulletSpeed: 30
 --- !u!1001 &5251001452574576397
 PrefabInstance:
   m_ObjectHideFlags: 0

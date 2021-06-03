@@ -54,29 +54,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\script\playerCamera.cs" />
+    <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorLinear.cs" />
     <Compile Include="Assets\script\Bullet.cs" />
+    <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSpherical.cs" />
     <Compile Include="Assets\script\Enemy.cs" />
     <Compile Include="Assets\script\cameraCtrl.cs" />
+    <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorMove.cs" />
     <Compile Include="Assets\script\trail.cs" />
+    <Compile Include="Assets\script\GravityShurikenManager.cs" />
     <Compile Include="Assets\script\MoveCamera.cs" />
+    <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\rotation.cs" />
     <Compile Include="Assets\camPosition.cs" />
     <Compile Include="Assets\ExplosionEffect\Scripts\PDS_GameController.cs" />
     <Compile Include="Assets\script\rotateShuriken.cs" />
+    <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSelf.cs" />
     <Compile Include="Assets\ExplosionEffect\Scripts\ScrollingUVs_PDS.cs" />
+    <Compile Include="Assets\script\ScaleIncrease.cs" />
     <Compile Include="Assets\script\GravityShuriken.cs" />
     <Compile Include="Assets\script\Player.cs" />
-    <Compile Include="Assets\script\GravityShurikenManager.cs" />
+    <Compile Include="Assets\script\expBullet.cs" />
+    <Compile Include="Assets\script\ExplosionEffectRemove.cs" />
+    <Compile Include="Assets\script\WeaponChange.cs" />
+    <Compile Include="Assets\WeaponChange1.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shuriken\Demo Scene\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\DissolveSoft_Alpha_Additive_softrim.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\Dissolve_Alpha_Additive_softrim.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\DissolveSoft_Alpha_Unlit.shader" />
+     <None Include="Assets\Particle Attractor by Moonflower Carnivore\Shaders\Particles Additive Intensify.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\unity5\Particle_Softrim_Dissolve_alpha.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\Dissolve_Alpha_Unlit_Opacity_softrim.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\softrim\Particle_softrim_add.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\DissolveSoft_Alpha_Additive_Opacity_softrim.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\softrim\Particle_softrim_add_stretch.shader" />
+     <None Include="Assets\Particle Attractor by Moonflower Carnivore\Particle Attractor documentation.txt" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\DissolveSoft_Alpha_Additive.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\DissolveSoft_Alpha_Unlit_Opacity.shader" />
      <None Include="Assets\ExplosionEffect\Shaders\legacy\Dissolve_Alpha_Additive.shader" />

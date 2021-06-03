@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637578995580000000
+      ticks: 637583169020000000
     m_Hash: 4007186375
   m_LockFileStatus:
     m_FilePath: C:/Users/zeras/Desktop/D/Tstar/ThrowingStar-main/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637581119851430529
+      ticks: 637583176964733494
     m_Hash: 38571225
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

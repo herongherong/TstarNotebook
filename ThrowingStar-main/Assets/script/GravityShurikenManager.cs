@@ -12,10 +12,10 @@ public class GravityShurikenManager : MonoBehaviour
     void Start()
     {
         firstCollision = 1;
-        gameObject.GetComponent<GravityShuriken>().enabled = false;
+        //gameObject.GetComponent<GravityShuriken>().enabled = false;
         Invoke("ShurikenRemove", 1f);
     }
-
+     
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +34,8 @@ public class GravityShurikenManager : MonoBehaviour
             {
                 Debug.Log("폭발수리검 어딘가에 충돌");
                 gameObject.GetComponent<GravityShuriken>().enabled = true;
+                GameObject.Find("GravityShuriken(Clone)").transform.GetChild(1).gameObject.SetActive(true);
+                firstCollision--;
             }
                 
             

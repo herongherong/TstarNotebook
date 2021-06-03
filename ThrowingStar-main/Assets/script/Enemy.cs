@@ -5,12 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     float acceleration;
-    float velocity = 0;
+    float velocity;
     float distance;
     // Start is called before the first frame update
     void Start()
     {
-        
+        acceleration = 0.005f;
+        velocity = 0;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
 
         Vector3 dir = (pos - transform.position).normalized;
 
-        acceleration = 0.005f;
+        
 
         velocity = (velocity + acceleration * Time.deltaTime);
 
@@ -56,6 +57,9 @@ public class Enemy : MonoBehaviour
                 transform.position.z + (dir.z * velocity));
             // 한방향 회전 구현
             transform.RotateAround(pos, new Vector3(0, 1, 0), 1600 * Time.deltaTime);
+
+            
+
         }
         else
 
@@ -64,6 +68,17 @@ public class Enemy : MonoBehaviour
             velocity = 0.0f;
 
         }
+        
+        if (gravityshuriken.warp == true)
+        {
+            Invoke("destroyEnemy", 3f);
+        }
 
+    }
+
+
+    void destroyEnemy()
+    {
+        Destroy(gameObject);
     }
 }
