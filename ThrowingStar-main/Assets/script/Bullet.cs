@@ -5,14 +5,16 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    GameObject TargetObj;
+    GameObject TargetObj; 
     Vector3 offset;
     Transform tr;
     public Vector3 pos;
+    public Vector3 bulPos;
+
 
     public bool isCollsion = false;
 
-    public float bulletSpeed = 2;
+    public float bulletSpeed = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +29,17 @@ public class Bullet : MonoBehaviour
     void Update()
     {
 
-        if (isCollsion)
+        if (isCollsion == true)
         {
-            transform.position = TargetObj.transform.position - offset;
+            //if(firstCollision == false)
+            //{
+            
+
+            transform.position = bulPos;
+
+               // firstCollision = true;
+               //}
+
         }
         else
         {
@@ -49,17 +59,21 @@ public class Bullet : MonoBehaviour
             //collisionOK();
             Destroy(gameObject, 3);
             //Destroy(TargetObj, 3);
+            //firstCollision = true;
+            bulPos = TargetObj.transform.position - offset;
         }
 
         if (other.tag == "Wall")
         {
-            TargetObj = GameObject.FindWithTag("Enemy");
+            TargetObj = GameObject.FindWithTag("Wall");
             offset = TargetObj.transform.position - transform.position;
             isCollsion = true;
             //collisionOK();
             //ExpBarrel();
             Destroy(gameObject, 3);
             //Debug.Log("col");
+            //firstCollision = true;
+            bulPos = TargetObj.transform.position - offset;
         }
 
        
