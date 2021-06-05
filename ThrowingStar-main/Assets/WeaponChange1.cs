@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponChange1 : MonoBehaviour
 {
-    float ScaleIncreaseFloat = 0.005f;
+    float ScaleIncreaseFloat = 0.5f;
     float ScaleReset = 1.0f;
 
     // Start is called before the first frame update

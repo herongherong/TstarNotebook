@@ -50,8 +50,20 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.tag == "Enemy")
+        if (other.tag == "Wall")
+        {
+            TargetObj = GameObject.FindWithTag("Wall");
+            offset = TargetObj.transform.position - transform.position;
+            isCollsion = true;
+            //collisionOK();
+            //ExpBarrel();
+
+            Destroy(gameObject, 3);
+            //Debug.Log("col");
+            //firstCollision = true;
+            bulPos = TargetObj.transform.position - offset;
+        }
+        else if(other.tag == "Enemy")
         {
             TargetObj = GameObject.FindWithTag("Enemy");
             offset = TargetObj.transform.position - transform.position;
@@ -63,18 +75,7 @@ public class Bullet : MonoBehaviour
             bulPos = TargetObj.transform.position - offset;
         }
 
-        if (other.tag == "Wall")
-        {
-            TargetObj = GameObject.FindWithTag("Enemy");
-            offset = TargetObj.transform.position - transform.position;
-            isCollsion = true;
-            //collisionOK();
-            //ExpBarrel();
-            Destroy(gameObject, 3);
-            //Debug.Log("col");
-            //firstCollision = true;
-            bulPos = TargetObj.transform.position - offset;
-        }
+         
 
        
     }

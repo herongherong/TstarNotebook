@@ -51,16 +51,14 @@ public class expBullet : MonoBehaviour
             offset = TargetObj.transform.position - transform.position;
             isCollsion = true;
             Invoke("explosion", cookingTime);
-
         }
 
         if (other.tag == "Wall")
         {
-            TargetObj = GameObject.FindWithTag("Enemy");
+            TargetObj = GameObject.FindWithTag("Wall");
             offset = TargetObj.transform.position - transform.position;
             isCollsion = true;
             Invoke("explosion", cookingTime);
-
         }
 
        

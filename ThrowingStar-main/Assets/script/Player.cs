@@ -144,37 +144,50 @@ public class Player : MonoBehaviour
         
         if (Input.GetKey(keyboard1))
         {
-            //걍 1번 2번 둘다 가져와서 초기화시키거나 늘리거나 함
-            WeaponChange weaponchange = GameObject.Find("WeaponNo1").GetComponent<WeaponChange>();
-            WeaponChange1 weaponchange1 = GameObject.Find("WeaponNo2").GetComponent<WeaponChange1>();
-            weaponchange.UIincrease();
-            weaponchange1.UIdecrease();
-            Debug.Log("1번을 눌럿슴");
-            WeaponinHand = 1; 
-            moveSpeed = 6f;
+            if(WeaponinHand != 1)
+            {
+                //걍 1번 2번 둘다 가져와서 초기화시키거나 늘리거나 함
+                WeaponChange weaponchange = GameObject.Find("WeaponNo1").GetComponent<WeaponChange>();
+                WeaponChange1 weaponchange1 = GameObject.Find("WeaponNo2").GetComponent<WeaponChange1>();
+                weaponchange.UIincrease();
+                weaponchange1.UIdecrease();
+                Debug.Log("1번을 눌럿슴");
+                WeaponinHand = 1;
+                moveSpeed = 6f;
+            }
+            
         }
         else if (Input.GetKey(keyboard2))
         {
-            //걍 1번 2번 둘다 가져와서 초기화시키거나 늘리거나 함
-            WeaponChange weaponchange = GameObject.Find("WeaponNo1").GetComponent<WeaponChange>();
-            WeaponChange1 weaponchange1 = GameObject.Find("WeaponNo2").GetComponent<WeaponChange1>();
-            weaponchange.UIdecrease();
-            weaponchange1.UIincrease();
+            if (WeaponinHand != 2)
+            {
+                //걍 1번 2번 둘다 가져와서 초기화시키거나 늘리거나 함
+                WeaponChange weaponchange = GameObject.Find("WeaponNo1").GetComponent<WeaponChange>();
+                WeaponChange1 weaponchange1 = GameObject.Find("WeaponNo2").GetComponent<WeaponChange1>();
+                weaponchange.UIdecrease();
+                weaponchange1.UIincrease();
 
-            Debug.Log("2번을 눌럿슴");
-            WeaponinHand = 2;
-            moveSpeed = 6f;
+                Debug.Log("2번을 눌럿슴");
+                WeaponinHand = 2;
+                moveSpeed = 6f;
+            }
+
+                
         }
         else if (Input.GetKey(keyboard3))
         {//걍 1번 2번 둘다 가져와서 초기화시키거나 늘리거나 함
-            WeaponChange weaponchange = GameObject.Find("WeaponNo1").GetComponent<WeaponChange>();
-            WeaponChange1 weaponchange1 = GameObject.Find("WeaponNo2").GetComponent<WeaponChange1>();
-            weaponchange.UIdecrease();
-            weaponchange1.UIdecrease();
+            if (WeaponinHand != 3)
+            {
+                WeaponChange weaponchange = GameObject.Find("WeaponNo1").GetComponent<WeaponChange>();
+                WeaponChange1 weaponchange1 = GameObject.Find("WeaponNo2").GetComponent<WeaponChange1>();
+                weaponchange.UIdecrease();
+                weaponchange1.UIdecrease();
 
-            Debug.Log("3번을 눌럿슴");
-            WeaponinHand = 3;
-            moveSpeed = 8f;
+                Debug.Log("3번을 눌럿슴");
+                WeaponinHand = 3;
+                moveSpeed = 8f;
+            }
+                
             
         }
 
